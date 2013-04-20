@@ -1,7 +1,9 @@
 Plztellme::Application.routes.draw do
   resources :telephones do
-    collection do
+    member do
       get 'call'
+    end
+    collection do
       get 'call_by'
     end
   end

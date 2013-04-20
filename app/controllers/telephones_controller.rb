@@ -1,17 +1,10 @@
 class TelephonesController < ApplicationController
-  before_action :set_telephone, only: [:show, :edit, :update, :destroy]
-  require 'rake'
-  #require 'rake/dsl_definition'
+  before_action :set_telephone, only: [:show, :edit, :update, :destroy, :call]
 
   def call
-#    rake = Rake::Application.new
-#    Rake.application = rake
-#    Rake.application.rake_require("telephone", ["#{Rails.root}/lib/tasks"])
-#    Rake::Task.define_task(:environment)
-#
-#    rake['telephone:call'].execute
-    Telephone.call
-    render :inline => "<%= 'called'  %>"  end
+    @telephone.call
+    render :inline => "<%= 'called'  %>"  
+  end
   
   def called_by
     binding.pry
