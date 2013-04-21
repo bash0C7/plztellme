@@ -6,7 +6,7 @@ gem 'arel',      github: 'rails/arel'
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 
 # libs
-gem 'twilio-ruby'
+gem 'wangiry'
 
 # database
 group :production do
